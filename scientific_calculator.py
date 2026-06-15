@@ -1,18 +1,3 @@
-"""
-Scientific Calculator
-----------------------
-Uses Python's built-in `math` module for advanced mathematical operations.
-Supports angles in both degrees and radians.
-
-Usage:
-    python scientific_calculator.py
-"""
-
-import math
-
-
-# ── Operation handlers ────────────────────────────────────────────────────────
-
 def square_root(num: float) -> float:
     if num < 0:
         raise ValueError("Square root of a negative number is undefined in real numbers.")
