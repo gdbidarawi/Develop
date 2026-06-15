@@ -1,17 +1,4 @@
-"""
-BMI Calculator
---------------
-Calculates Body Mass Index (BMI) from weight and height,
-then classifies the result using WHO standard categories.
-
-Formula:  BMI = weight(kg) / height(m)²
-
-Usage:
-    python bmi_calculator.py
-"""
-
-
-# ── Classification ─────────────────────────────────────────────────────────────
+#BMI Calculator
 
 BMI_CATEGORIES = [
     (18.5, "Underweight",    "You may be at risk for nutritional deficiencies."),
@@ -43,7 +30,7 @@ def bmi_bar(bmi: float) -> str:
     return f"  0 [{bar}] 40+"
 
 
-# ── Input helpers ─────────────────────────────────────────────────────────────
+#Input helpers
 
 def get_positive_float(prompt: str) -> float:
     while True:
@@ -56,7 +43,7 @@ def get_positive_float(prompt: str) -> float:
             print("  [Error] Please enter a positive number.\n")
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+# Main
 
 def run():
     print("=" * 45)
