@@ -1,21 +1,11 @@
-"""
-GUI Calculator — Tkinter
--------------------------
-A fully functional desktop calculator with a clean grid layout.
-Supports arithmetic, percentage, sign toggle, and keyboard input.
 
-Requirements:
-    tkinter (included with standard Python on Windows/macOS/Linux)
-
-Usage:
-    python gui_calculator.py
-"""
+#python gui_calculator.py
 
 import tkinter as tk
 from tkinter import font as tkfont
 
 
-# ── Constants ─────────────────────────────────────────────────────────────────
+# Constants
 
 BG         = "#1e1e2e"
 DISPLAY_BG = "#181825"
@@ -32,7 +22,7 @@ FONT_EXPR  = ("Courier New", 12)
 FONT_BTN   = ("Segoe UI", 16, "bold")
 
 
-# ── Calculator logic ──────────────────────────────────────────────────────────
+# Calculator logic
 
 class CalculatorLogic:
     def __init__(self):
@@ -121,7 +111,7 @@ class CalculatorLogic:
         return s
 
 
-# ── GUI ───────────────────────────────────────────────────────────────────────
+# GUI
 
 class CalculatorApp(tk.Tk):
     def __init__(self):
@@ -134,7 +124,7 @@ class CalculatorApp(tk.Tk):
         self._build_ui()
         self._bind_keys()
 
-    # ── Display ──────────────────────────────────────────────────────────────
+    # Display
 
     def _build_ui(self):
         # Expression label
@@ -189,7 +179,7 @@ class CalculatorApp(tk.Tk):
         for c in range(4):
             self.columnconfigure(c, weight=1)
 
-    # ── Keyboard ─────────────────────────────────────────────────────────────
+    # Keyboard
 
     def _bind_keys(self):
         for d in "0123456789":
@@ -204,7 +194,7 @@ class CalculatorApp(tk.Tk):
         self.bind("<BackSpace>", lambda e: self._on_button("⌫"))
         self.bind("<Escape>",    lambda e: self._on_button("AC"))
 
-    # ── Button handler ────────────────────────────────────────────────────────
+    # Button handler
 
     def _on_button(self, label: str):
         L = self.logic
@@ -231,7 +221,7 @@ class CalculatorApp(tk.Tk):
         self.expr_var.set(self.logic.expression)
 
 
-# ── Entry point ───────────────────────────────────────────────────────────────
+# Entry point
 
 if __name__ == "__main__":
     app = CalculatorApp()
