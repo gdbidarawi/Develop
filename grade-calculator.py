@@ -12,7 +12,7 @@ def calculate_grade(average):
     else:
         return "F"
 
-print("===== Grade Calculator =====")
+print("Grade Calculator")
 
 num_subjects = int(input("Enter number of subjects: "))
 
@@ -25,7 +25,7 @@ for i in range(num_subjects):
 average = total / num_subjects
 grade = calculate_grade(average)
 
-print("\n===== Result =====")
+print("\nResult")
 print(f"Total Marks: {total:.2f}")
 print(f"Average: {average:.2f}")
 print(f"Grade: {grade}")
