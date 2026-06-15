@@ -1,15 +1,4 @@
-"""
-Advanced Calculator — Function-Based
--------------------------------------
-Demonstrates clean code organisation with separate functions for each operation.
-Includes input validation and a loop so the user can calculate multiple times.
 
-Usage:
-    python advanced_calculator.py
-"""
-
-
-# ── Operations ──────────────────────────────────────────────────────────────
 
 def add(a: float, b: float) -> float:
     return a + b
@@ -28,8 +17,6 @@ def divide(a: float, b: float) -> float | str:
         return "Error: Cannot divide by zero"
     return a / b
 
-
-# ── Helpers ──────────────────────────────────────────────────────────────────
 
 OPERATIONS = {
     "1": ("Add",      add),
@@ -57,8 +44,6 @@ def get_numbers() -> tuple[float, float] | None:
         print("  [Error] Please enter valid numbers.")
         return None
 
-
-# ── Main loop ─────────────────────────────────────────────────────────────────
 
 def run():
     while True:
